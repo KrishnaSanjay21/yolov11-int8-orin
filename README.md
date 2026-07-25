@@ -1,5 +1,17 @@
 # YOLOv11s INT8 PTQ for Jetson Orin NX
 
+> FP32 → FP16 → INT8 TensorRT quantization of YOLOv11s with **honest per-class accuracy
+> accounting** — no aggregate hand-waving, every class audited, every device number measured.
+
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/deploy?repository=KrishnaSanjay21/yolov11-int8-orin&branch=main&mainModule=streamlit_app.py)
+![Python](https://img.shields.io/badge/python-3.10%2B-blue)
+![Tests](https://img.shields.io/badge/tests-56%20passing-brightgreen)
+![Host deps](https://img.shields.io/badge/host%20deps-numpy%20only-informational)
+![Target](https://img.shields.io/badge/target-Jetson%20Orin%20NX-76B900)
+
+**🚀 Live demo:** deploy in two clicks with the badge above (or see [DEPLOY.md](DEPLOY.md)).
+Once live, replace this line with your app URL, e.g. `https://<app>.streamlit.app`.
+
 Post-training quantization of YOLOv11s (FP32 → FP16 → INT8 TensorRT engines) with
 **honest per-class accuracy accounting**, a custom fused TensorRT plugin, calibrator /
 calibration-size sweeps, and layer-level sensitivity-driven selective FP16 fallback.
