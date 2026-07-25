@@ -1,0 +1,9 @@
+# Normalize line endings. Scripts run on the Linux Jetson, so keep LF on checkout
+# everywhere (CRLF in a .sh breaks `#!/usr/bin/env bash` on the device).
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.engine binary
+*.onnx binary
+*.pt binary
+*.cache binary

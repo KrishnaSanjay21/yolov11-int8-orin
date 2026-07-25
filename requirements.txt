@@ -1,0 +1,4 @@
+# Streamlit Cloud reads THIS file. The frontend runs the host-testable core only
+# (numpy). No torch/tensorrt/cuda — those are device-only (see requirements-device.txt).
+streamlit>=1.36
+numpy>=1.24

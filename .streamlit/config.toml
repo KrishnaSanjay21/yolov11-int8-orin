@@ -1,0 +1,13 @@
+[theme]
+base = "dark"
+primaryColor = "#76b900"          # NVIDIA green
+backgroundColor = "#0e1117"
+secondaryBackgroundColor = "#1c2029"
+textColor = "#e6e6e6"
+font = "monospace"
+
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false

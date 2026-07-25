@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# Model artifacts (large / device-produced) — NOT the calibration cache, which we commit.
+*.pt
+*.onnx
+*.engine
+*.plan
+weights/
+
+# Device build artifacts
+build/
+*.o
+*.so
+*.a
+
+# Results are produced on device; keep the templates, ignore filled raw dumps unless committed intentionally.
+results/raw/*.json
+!results/raw/.gitkeep
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IMPORTANT: calibration caches ARE committed (spec requirement). Do not ignore calib_cache/.

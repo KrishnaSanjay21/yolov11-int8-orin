@@ -1,0 +1,19 @@
+# Device-side (Jetson Orin NX, JetPack) requirements — RUN ON DEVICE.
+# These are NOT needed to run the host test suite. Versions below match a typical
+# JetPack 6.x / L4T r36 stack; pin to whatever `dpkg -l | grep nvinfer` reports on YOUR unit
+# and record it in BENCHMARKS.md (Environment section).
+#
+# Provided by JetPack (apt / preinstalled) — do NOT pip install these on Jetson:
+#   tensorrt            (python bindings: `python3 -c "import tensorrt"`)
+#   cuda / cudnn        (from JetPack)
+#
+# pip-installable on device:
+torch                 # NVIDIA Jetson wheel (from https://developer.download.nvidia.com), NOT PyPI
+torchvision           # matching Jetson wheel
+ultralytics>=8.3.0    # provides YOLOv11 ('yolo11s.pt') export
+onnx>=1.15
+onnxsim               # optional graph simplification before TRT
+pycuda                # host<->device buffer mgmt for the calibrator + runner
+opencv-python         # calibration image preprocessing (letterbox)
+numpy>=1.24
+pyyaml

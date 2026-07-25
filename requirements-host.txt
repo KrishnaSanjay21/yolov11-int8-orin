@@ -1,0 +1,10 @@
+# Host-side (CPU, any OS) requirements — enough to run the FULL host test suite.
+# The host-testable core (calibration math, mAP/accuracy diff, layer sensitivity,
+# stub engine, plugin numpy reference) depends ONLY on numpy.
+numpy>=1.24
+pytest>=7.0
+
+# Optional: if torch (CPU is fine) is present, the DFL plugin test ALSO cross-checks the
+# numpy reference against a real PyTorch reference op. Tests auto-skip the torch cross-check
+# if torch is not installed, so it is not required to get a green suite.
+# torch   # install via: pip install torch --index-url https://download.pytorch.org/whl/cpu

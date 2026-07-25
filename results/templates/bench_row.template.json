@@ -1,0 +1,11 @@
+{
+  "config": "int8_entropy_512",
+  "latency_mean_ms": null,
+  "latency_p99_ms": null,
+  "throughput_fps": null,
+  "power_w": null,
+  "mem_mb": null,
+  "map50": null,
+  "map5095": null,
+  "_note": "Produced on device by scripts/08_benchmark.py -> results/raw/bench_<config>.json. null = not yet measured (renders as em-dash, never a fake 0)."
+}
